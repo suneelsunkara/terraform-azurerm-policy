@@ -1,0 +1,25 @@
+terraform fmt -recursive
+terraform validate
+terraform providers
+terraform init 
+
+az login
+az account list
+az account set --subscription="87df609f-383a-42b0-908d-02347b9e525b"
+
+terraform login
+terraform plan 
+terraform apply
+az ad sp create-for-rbac --name "Terraform-AzureRM-Policy" --role "Resource Policy Contributor" --scopes "/subscriptions/87df609f-383a-42b0-908d-02347b9e525b"
+
+terraform workspace new subscriptionName1 ".\workspaces\subscriptionName1"
+terraform workspace list
+
+
+terraform workspace select subscriptionName1
+terraform workspace show
+terraform plan -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"
+terraform apply -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"
+
+terraform destroy -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"
+

@@ -1,5 +1,3 @@
-/* 
-
 variable "subscription_id" {
   type        = string
   description = "Your Azure Subscription ID"
@@ -18,6 +16,4 @@ variable "client_secret" {
 variable "tenant_id" {
   type        = string
   description = "Your Azure Tenant ID"
-} 
-
-*/
+}
