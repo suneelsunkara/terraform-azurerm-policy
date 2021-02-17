@@ -1,5 +1,11 @@
 terraform {
   backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "suneelsunkara"
+
+    workspaces {
+      name = "subscriptionName1"
+    }
   }
   required_version = ">= 0.13"
   required_providers {
